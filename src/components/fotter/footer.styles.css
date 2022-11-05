@@ -1,0 +1,18 @@
+.footer {
+  position: relative;
+  top: -300px;
+  z-index: -1;
+  background-color: #f3ede7;
+  display: flex;
+  height: 300px;
+  align-items: flex-end;
+  padding-top: 95px;
+  padding-bottom: 72px;
+  margin-bottom: -300px;
+}
+
+@media screen and (max-width: 600px) {
+  .footer {
+    padding-top: 200px;
+  }
+}
