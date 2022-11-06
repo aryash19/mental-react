@@ -14,7 +14,7 @@ export const themeOptions = createTheme({
       main: "#f50057",
     },
     background: {
-      default: "#e0ffff",
+      default: "#ffffff",
       paper: "#172339",
     },
     text: {
@@ -58,6 +58,13 @@ export const themeOptions = createTheme({
     },
     body2: {
       fontSize: 12,
+      lineHeight: 1.62,
+      letterSpacing: "2.5px",
+      color: "#49566D",
+      textTransform: "uppercase",
+    },
+    body3: {
+      fontSize: 36,
       lineHeight: 1.62,
       letterSpacing: "2.5px",
       color: "#49566D",

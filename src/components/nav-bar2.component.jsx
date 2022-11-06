@@ -1,5 +1,6 @@
 import { Container, Grid, Typography } from "@mui/material";
 import ButtonNew from "./buttons/button-new";
+import { Link } from "react-router-dom";
 
 const NavBarr = () => {
   return (
@@ -11,7 +12,11 @@ const NavBarr = () => {
         sx={{ margin: "50px 0 100px 0" }}
       >
         <Grid item xs={3.5}>
-          <Typography variant="h2">Blithe</Typography>
+          <Link style={{ textDecoration: "none" }} to="/">
+            <Typography variant="h3" fontFamily="Epilogue">
+              Blithe
+            </Typography>
+          </Link>
         </Grid>
         <Grid item container xs={8.5} sx={{ justifyContent: "right" }}>
           <ButtonNew />

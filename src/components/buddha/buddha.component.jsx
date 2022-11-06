@@ -1,17 +1,17 @@
 import { Grid, Card, CardMedia, Container, Typography } from "@mui/material";
 import { ReactComponent as LilCurve } from "../../assets/pattern-curved-line-2.svg";
 import { ReactComponent as Blur } from "../../assets/pattern-blur.svg";
-import jeremyImg from "../../assets/ai.jpg";
+import aiImg from "../../assets/ai.jpg";
 import "./buddha.styles.css";
 
-const Jeremy = () => {
+const Buddha = () => {
   return (
     <>
       <Container maxWidth="lg">
         <CardMedia
           component="img"
-          image={jeremyImg}
-          alt="jeremy"
+          image={aiImg}
+          alt="ai"
           sx={{
             height: "449px",
             width: "auto",
@@ -89,4 +89,4 @@ const Jeremy = () => {
   );
 };
 
-export default Jeremy;
+export default Buddha;

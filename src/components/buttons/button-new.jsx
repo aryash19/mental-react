@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const ButtonNew = () => {
   return (
-    <Link style={{ textDecoration: "none" }} to="/signup">
+    <Link style={{ textDecoration: "none" }} to="/login">
       <StyledButtonSecondary
         component="Link"
         to="/login"
