@@ -77,9 +77,9 @@ export default function Process() {
                   Thank you for your Screening.
                 </Typography>
                 <Typography variant="subtitle1">
-                  Your User name is Yana Rakesh.You need a counselling according
-                  to our alogrithm go to our patient dashboard to book
-                  counselling slot with psychiatrist.
+                  Your User name is Aryash . You need a counselling according to
+                  our alogrithm go to our patient dashboard to book counselling
+                  slot with psychiatrist.
                 </Typography>
                 <Button
                   type="submit"
