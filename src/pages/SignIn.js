@@ -90,7 +90,7 @@ export default function SignIn() {
                 control={<Checkbox value="remember" color="primary" />}
                 label="Remember me"
               />
-              <Link style={{ textDecoration: "none" }} to="/checkout">
+              <Link style={{ textDecoration: "none" }} to="/process">
                 <Button
                   type="submit"
                   fullWidth

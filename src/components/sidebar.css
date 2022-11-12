@@ -1,0 +1,39 @@
+.Doctor {
+  width: 100vw;
+  height: 100vh;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+.tool-bar {
+  background-color: #172339;
+  align-items: center;
+  color: #f3ede7;
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+}
+.sidebar {
+  position: absolute;
+  background-color: #172339;
+  color: #f3ede7;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 280px;
+}
+.sidebar li {
+  list-style: none;
+  padding: 1rem 2rem;
+  border-bottom: solid rgba(255, 255, 255, 0.1) 1px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-weight: 300;
+}
+
+.sidebar li:hover {
+  background-color: #f3ede7;
+  color: #172339;
+}
