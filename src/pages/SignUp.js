@@ -94,7 +94,7 @@ export default function SignUp() {
                   />
                 </Grid>
               </Grid>
-              <Link style={{ textDecoration: "none" }} to="/checkout">
+              <Link style={{ textDecoration: "none" }} to="/process">
                 <Button
                   type="submit"
                   fullWidth
