@@ -33,7 +33,7 @@ const Sidebar = ({ sidebar }) => {
         </Link>
       </li>
       <li>
-        <Link style={{ textDecoration: "none" }} to="/">
+        <Link style={{ textDecoration: "none" }} to="/patientinfo">
           <Button
             type="submit"
             fullWidth

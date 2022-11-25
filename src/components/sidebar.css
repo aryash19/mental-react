@@ -81,6 +81,26 @@ body {
   height: auto;
   width: 200px;
   align-items: center;
-  margin-left: 300px;
+  margin-left: 200px;
   margin-top: 80px;
+}
+.Card2 {
+  height: auto;
+  width: 200px;
+  align-items: center;
+  margin-left: 325px;
+  margin-top: 80px;
+}
+.cardbtn {
+  align-items: center;
+  margin-left: 45px;
+}
+.cardbtn2 {
+  align-items: center;
+  margin-left: 80px;
+}
+.slottask {
+  margin-left: 300px;
+  width: 1200px;
+  margin-top: 40px;
 }
