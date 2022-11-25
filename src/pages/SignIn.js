@@ -14,6 +14,9 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Footerr from "../components/fotter/footerr";
 import Paper from "@mui/material/Paper";
 import AppBar from "@mui/material/AppBar";
+import { useState } from "react";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../firebase";
 
 const theme = createTheme();
 
@@ -26,7 +29,15 @@ export default function SignIn() {
       password: data.get("password"),
     });
   };
-
+const [loginEmail, setloginEmail] = useState("");
+const[loginPassword, setloginPassword] = useState("");
+const login = async () =>{try{
+  const user = await signInWithEmailAndPassword(auth,loginEmail,loginPassword);
+  console.log(user);
+ } catch (error) {
+   
+   console.log(error.message);
+ }};
   return (
     <ThemeProvider theme={theme}>
       <NavB />
@@ -63,7 +74,7 @@ export default function SignIn() {
             <Box
               component="form"
               onSubmit={handleSubmit}
-              noValidate
+              Validate
               sx={{ mt: 1 }}
             >
               <TextField
@@ -75,16 +86,18 @@ export default function SignIn() {
                 name="email"
                 autoComplete="email"
                 autoFocus
+                onChange={(event)=> {setloginEmail(event.target.value);}}
               />
               <TextField
                 margin="normal"
                 required
                 fullWidth
-                name="password"
+                name="Password"
                 label="Password"
                 type="password"
                 id="password"
                 autoComplete="current-password"
+                onChange={(event)=> {setloginPassword(event.target.value);}}
               />
               <FormControlLabel
                 control={<Checkbox value="remember" color="primary" />}
@@ -92,6 +105,7 @@ export default function SignIn() {
               />
               <Link style={{ textDecoration: "none" }} to="/process">
                 <Button
+                onClick={login}
                   type="submit"
                   fullWidth
                   variant="contained"
