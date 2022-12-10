@@ -8,7 +8,7 @@ import Stepper from "@mui/material/Stepper";
 import Step from "@mui/material/Step";
 import StepLabel from "@mui/material/StepLabel";
 import Button from "@mui/material/Button";
-import Link from "react-router-dom";
+import { Link } from "react-router-dom";
 import Typography from "@mui/material/Typography";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Processone from "./Processone";
@@ -77,18 +77,19 @@ export default function Process() {
                   Thank you for your Screening.
                 </Typography>
                 <Typography variant="subtitle1">
-                  Your User name is Aryash . You need a counselling according to
-                  our alogrithm go to our patient dashboard to book counselling
-                  slot with psychiatrist.
+                  You need a counselling according to our alogrithm go to our
+                  patient dashboard to book counselling slot with psychiatrist.
                 </Typography>
-                <Button
-                  type="submit"
-                  fullWidth
-                  variant="contained"
-                  sx={{ mt: 3, mb: 2 }}
-                >
-                  Go to Dashboard
-                </Button>
+                <Link style={{ textDecoration: "none" }} to="/docdash">
+                  <Button
+                    type="submit"
+                    fullWidth
+                    variant="contained"
+                    sx={{ mt: 3, mb: 2 }}
+                  >
+                    Go to Dashboard
+                  </Button>
+                </Link>
               </React.Fragment>
             ) : (
               <React.Fragment>

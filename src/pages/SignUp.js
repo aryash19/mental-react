@@ -12,6 +12,9 @@ import NavBarr from "../components/nav-bar2.component";
 import Footerr from "../components/fotter/footerr";
 import Paper from "@mui/material/Paper";
 import AppBar from "@mui/material/AppBar";
+import { useState } from "react";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import {auth} from "../firebase";
 
 const theme = createTheme();
 
@@ -24,6 +27,19 @@ export default function SignUp() {
       password: data.get("password"),
     });
   };
+  const [registerEmail, setRegisterEmail] = useState("");
+const[registerPassword, setRegisterPassword] = useState("");
+const register = async () => {
+try{
+ const user = await createUserWithEmailAndPassword(auth,registerEmail,registerPassword);
+ console.log(user);
+} catch (error) {
+  
+  console.log(error.message);
+}
+};
+
+
 
   return (
     <ThemeProvider theme={theme}>
@@ -80,6 +96,7 @@ export default function SignUp() {
                     label="Email Address"
                     name="email"
                     autoComplete="email"
+                    onChange={(event)=> {setRegisterEmail(event.target.value);}}
                   />
                 </Grid>
                 <Grid item xs={12}>
@@ -91,13 +108,16 @@ export default function SignUp() {
                     type="password"
                     id="password"
                     autoComplete="new-password"
+                    onChange={(event)=> {setRegisterPassword(event.target.value);}}
                   />
                 </Grid>
               </Grid>
-              <Link style={{ textDecoration: "none" }} to="/checkout">
+              <Link style={{ textDecoration: "none" }} to="/process">
                 <Button
+                onClick={register}
                   type="submit"
                   fullWidth
+                  
                   variant="contained"
                   sx={{ mt: 3, mb: 2 }}
                 >
@@ -118,4 +138,4 @@ export default function SignUp() {
       <Footerr />
     </ThemeProvider>
   );
-}
+          }
